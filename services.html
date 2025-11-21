@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EliteFit Studio | Servics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style1.css">
+     <script src="js/bootstrap.bundle.js"></script>
+
+<body>
+  <header class="text-white sticky-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid py-2">
+      <a class="navbar-brand fw-bold fs-3 ms-4" href="#">EliteFit</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end me-4" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <form class="d-flex ms-3">
+          <input class="form-control form-control-sm" type="search" placeholder="Search">
+        </form>
+
+        <button class="btn btn-outline-light btn-sm ms-2" data-bs-toggle="offcanvas" data-bs-target="#notifPanel">
+          <i class="ri-notification-3-line"></i>
+        </button>
+
+        <a href="my-bookings.php" class="btn btn-light btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#loginBox">
+          <i class="ri-user-3-fill text-dark"></i> Login
+        </a>
+        <button class="btn btn-danger btn-sm ms-2" onclick="logoutUser()">
+  <i class="ri-logout-box-r-line"></i> Logout
+</button>
+      </div>
+    </nav>
+  </header>
+  <div class="offcanvas offcanvas-end" id="notifPanel">
+    <div class="offcanvas-header">
+      <h5><i class="ri-notification-3-fill"></i> Notifications</h5>
+      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+        <li class="list-group-item">New yoga batch starts Monday</li>
+        <li class="list-group-item">Sunday Gym Closed</li>
+        <li class="list-group-item">Bring your membership card</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal fade" id="loginBox">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-box p-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title"><i class="ri-user-3-fill"></i> Member Login</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <input type="email" class="form-control mb-3" placeholder="Email">
+            <input type="password" class="form-control mb-3" placeholder="Password">
+            <a href="my-bookings.php" class="btn btn-success w-100">Login</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="services-section">
+    <h1>Our Fitness Programs</h1>
+    <p class="intro-text">Choose from a variety of dynamic programs designed to transform your body and mind.</p>
+
+    <div class="service-cards">
+      <div class="service-card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Strength Training</h3>
+        <p>Build lean muscle mass and boost endurance with our expert-guided resistance training sessions.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-running"></i>
+        <h3>Cardio Workouts</h3>
+        <p>Burn fat, improve stamina, and keep your heart healthy through high-intensity cardio sessions.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-spa"></i>
+        <h3>Yoga & Meditation</h3>
+        <p>Find balance and inner peace with our yoga and mindfulness classes guided by certified instructors.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bolt"></i>
+        <h3>HIIT & CrossFit</h3>
+        <p>Experience fast-paced, challenging workouts that push your limits and transform your fitness level.</p>
+      </div>
+    </div>
+  </section>
+  <section class="pricing-section">
+    <h2>Flexible Pricing Plans</h2>
+    <p class="pricing-subtitle">Choose your plan — pay monthly or yearly and get fit your way.</p>
+
+    <div class="pricing-toggle">
+      <button id="monthlyBtn" class="active">Monthly</button>
+      <button id="yearlyBtn">Yearly</button>
+    </div>
+
+    <div class="pricing-cards" id="pricingContainer">
+    </div>
+  </section>
+  <section class="join-cta">
+    <h2>Start Your Fitness Journey Today!</h2>
+    <a href="contact.html" class="btn">Join Now</a>
+  </section>
+
+    
+    <footer class="text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 EliteFit Studio. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

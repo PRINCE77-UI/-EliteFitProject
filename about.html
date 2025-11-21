@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EliteFit Studio | About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+     <script src="js/bootstrap.bundle.js"></script>
+
+<body>
+  <header class="text-white sticky-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid py-2">
+      <a class="navbar-brand fw-bold fs-3 ms-4" href="#">EliteFit</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end me-4" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <form class="d-flex ms-3">
+          <input class="form-control form-control-sm" type="search" placeholder="Search">
+        </form>
+
+        <button class="btn btn-outline-light btn-sm ms-2" data-bs-toggle="offcanvas" data-bs-target="#notifPanel">
+          <i class="ri-notification-3-line"></i>
+        </button>
+
+        <button class="btn btn-light btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#loginBox">
+          <i class="ri-user-3-fill text-dark"></i> Login
+        </button>
+        <a href="my-bookings.php" class="btn btn-danger btn-sm ms-2" onclick="logoutUser()">
+  <i class="ri-logout-box-r-line"></i> Logout
+        </a>
+      </div>
+    </nav>
+  </header>
+  <div class="offcanvas offcanvas-end" id="notifPanel">
+    <div class="offcanvas-header">
+      <h5><i class="ri-notification-3-fill"></i> Notifications</h5>
+      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+        <li class="list-group-item">New yoga batch starts Monday</li>
+        <li class="list-group-item">Sunday Gym Closed</li>
+        <li class="list-group-item">Bring your membership card</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal fade" id="loginBox">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content glass-box p-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title"><i class="ri-user-3-fill"></i> Member Login</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <input type="email" class="form-control mb-3" placeholder="Email">
+            <input type="password" class="form-control mb-3" placeholder="Password">
+            <a href="my-bookings.php" class="btn btn-success w-100">Login</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="about-section py-5">
+    <div class="container text-center">
+      <h1 class="fw-bold mb-4">About EliteFit</h1>
+      <p class="lead mb-5 fs-6">We are not just a gym — we are a lifestyle revolution. EliteFit is built on passion, power,
+        and progress. Since 2015, we've been training professionals, athletes, and individuals of all ages to achieve
+        their full potential through expert-guided programs and holistic fitness experiences.</p>
+
+      <div class="row text-center">
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow p-4">
+            <h3 class="fw-bold">Our Mission</h3>
+            <p class="fs-6">To empower every member to lead a healthier, stronger, and more confident life.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 shadow p-4">
+            <h3 class="fw-bold">Our Vision</h3>
+            <p class="fs-6">To be India’s most trusted and advanced fitness community with premium facilities and world-class
+              training.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="team-section py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">Meet Our Trainers</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card trainer-card shadow p-3 h-100">
+            <img src="images/1.jpg" class="card-img-top w-100 mx-auto d-block" alt="Rahul Sinha"
+              style="width:150px; height:150px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Rahul Sinha</h5>
+              <p class="card-text">Strength & Conditioning Coach</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card trainer-card shadow p-3 h-100">
+            <img src="images/2.jpg" class="card-img-top w-100 mx-auto d-block" alt="Priya Mehta"
+              style="width:150px; height:150px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Priya Mehta</h5>
+              <p class="card-text">Yoga & Wellness Expert</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card trainer-card shadow p-3 h-100">
+            <img src="images/3.jpg" class="card-img-top w-100 mx-auto d-block" alt="Ajay Raj"
+              style="width:150px; height:150px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Ajay Raj</h5>
+              <p class="card-text">CrossFit & Mobility Coach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="achievements-section py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Our Achievements</h2>
+      <ul class="list-unstyled fs-5">
+        <li class="mb-3 fs-5"><i class="fas fa-award me-2 text-primary"></i> Certified by International Fitness Association
+        </li>
+        <li class="mb-3 fs-5"><i class="fas fa-star me-2 text-warning"></i> Rated 4.9/5 by over 3,000 members</li>
+        <li class="mb-3 fs-5"><i class="fas fa-users me-2 text-success"></i> Hosted 250+ fitness bootcamps</li>
+      </ul>
+    </div>
+  </section>
+  <footer class="text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2025 EliteFit Studio. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+const sections = document.querySelectorAll(".about-section, .team-section, .achievements-section");
+
+function revealSections() {
+    sections.forEach(sec => {
+        const secTop = sec.getBoundingClientRect().top;
+        if (secTop < window.innerHeight - 100) {
+            sec.classList.add("show-section");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
+
+  </script>
+</body>
+
+</html>
